@@ -4,7 +4,7 @@ const request = indexedDB.open ('BudgetDB', 1);
 
 request.onupgradeneeded = function (e) {
   db = e.target.result;
-  db.createOBjectStore('BudgetStore', {autoIncrement: true});
+  db.createObjectStore('BudgetStore', {autoIncrement: true});
 };
 
 request.onerror = function (e) {
